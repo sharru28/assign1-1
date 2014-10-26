@@ -50,7 +50,7 @@ void draw() {
       // start rolling
       // -------------------------------------------------
       // put your code inside here
-      totalScore= 500-50 ;
+      totalScore-=50 ;
        
       
       
@@ -66,10 +66,14 @@ void draw() {
       // stop rolling
       // -------------------------------------------------
       // put your code inside here
-      int X = int(random(2));
-      int fid = int(random(5));
+
+      int fidA = int(random(6));
+      int fidB = int(random(6));
+      int fidC = int(random(6));
       
-      machine.setSlotFruit(X,fid);
+      machine.setSlotFruit(0,fidA);
+      machine.setSlotFruit(1,fidB);
+      machine.setSlotFruit(2,fidC);
       
       //
       
@@ -80,7 +84,7 @@ void draw() {
       int  q = machine.getFruitCount(4);
       int  r = machine.getFruitCount(5);
       
-      totalScore=500-50+m*m*60+n*n*10+o*o*20+p*p*30+q*q*40+r*r*50;
+      totalScore=totalScore +m*m*60+n*n*10+o*o*20+p*p*30+q*q*40+r*r*50;
        
       
       
